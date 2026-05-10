@@ -1,17 +1,24 @@
-export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
+import React from "react";
+
+export function TodoItem({ id, title, completed, toggleTodo, deleteTodo }) {
   return (
     <li>
       <label>
         <input
           type="checkbox"
           checked={completed}
-          onChange={e => toggleTodo(id, e.target.checked)}
+          onChange={(e) => toggleTodo(id, e.target.checked)}
         />
-        {title}
+        <span
+          style={{
+            textDecoration: completed ? "line-through" : "none",
+            color: completed ? "gray" : "black",
+          }}
+        >
+          {title}
+        </span>
       </label>
-      <button onClick={() => deleteTodo(id)} className="btn btn-danger">
-        Delete
-      </button>
+      <button onClick={() => deleteTodo(id)}>Delete</button>
     </li>
-  )
+  );
 }

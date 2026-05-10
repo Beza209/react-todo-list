@@ -4,7 +4,7 @@
 }
 
 body {
-  background: #333;
+  background: #42484f;
   color: hsl(200, 100%, 90%);
   max-width: 400px;
   padding: 1rem;
@@ -24,7 +24,7 @@ body {
 }
 
 .btn {
-  background: hsl(200, 100%, 50%, 0.1);
+  background: hsla(60, 1%, 54%, 0.118));
   border: 1px solid hsl(200, 100%, 50%);
   color: hsl(200, 100%, 50%);
   padding: 0.25em 0.5em;
